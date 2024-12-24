@@ -28,17 +28,32 @@
 
 import pandas as pd
 
-# Define your CSV file path and image directory
+# # Define your CSV file path and image directory
 csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
-image_dir = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/"  # Image directory
+# image_dir = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/"  # Image directory
 
-# Load the CSV file
+# # Load the CSV file
+# df = pd.read_csv(csv_path)
+
+# # Assuming the image names are in the second column (index 1) of the CSV
+# df.iloc[:, 1] = image_dir + df.iloc[:, 1]  # Prepend the path to the image names
+
+# # Save the updated CSV
+# df.to_csv(csv_path, index=False)
+
+# print("Updated CSV with full paths in the second column.")
+
+# from tflite_model_maker import object_detector
+
+# help(object_detector.DataLoader.from_csv)
+
+# Load the CSV
 df = pd.read_csv(csv_path)
 
-# Assuming the image names are in the second column (index 1) of the CSV
-df.iloc[:, 1] = image_dir + df.iloc[:, 1]  # Prepend the path to the image names
+# Drop columns by index (2 and 3)
+df.drop(df.columns[[2, 3]], axis=1, inplace=True)
 
-# Save the updated CSV
+# Save the updated CSV back to the file
 df.to_csv(csv_path, index=False)
 
-print("Updated CSV with full paths in the second column.")
+print("Removed columns 2 and 3 successfully.")
