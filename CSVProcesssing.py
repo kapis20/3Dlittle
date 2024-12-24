@@ -3,7 +3,7 @@ import pandas as pd
 ## Add name of the set 
 ###################################
 # # Define paths to your CSV files
-#train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
+# train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 # valid_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/valid/_annotations.csv"
 # test_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
 
@@ -29,9 +29,9 @@ import pandas as pd
 
 
 # import pandas as pd
-###################################
-## Add path 
-###################################
+# ##################################
+# # Add path 
+# ##################################
 # # # Define your CSV file path and image directory
 # csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 # image_dir = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/"  # Image directory
@@ -52,7 +52,7 @@ import pandas as pd
 ###################################
 # shuffle label 
 ###################################
-import pandas as pd
+# import pandas as pd
 
 # Path to your CSV file
 csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"

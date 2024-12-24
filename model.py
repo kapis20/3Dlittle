@@ -17,7 +17,7 @@ logging.set_verbosity(logging.ERROR)
 ########################
 # paths 
 ########################
-train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations_copy.csv"
+train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 valid_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/valid/_annotations.csv"
 test_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
 
