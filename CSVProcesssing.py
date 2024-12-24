@@ -61,11 +61,19 @@ csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 
 df = pd.read_csv(csv_path)
 
-# Move column 2 to the last position
-column_to_move = df.columns[2]  # Get the column name at index 2
-df = df[[col for col in df.columns if col != column_to_move] + [column_to_move]]
+# Load the CSV
+df = pd.read_csv(csv_path)
+
+# Get the name of the last column
+last_column = df.columns[-1]
+
+# Create a new column order: Insert the last column at index 2 (3rd position)
+new_column_order = list(df.columns[:2]) + [last_column] + list(df.columns[2:-1])
+
+# Reorder the DataFrame
+df = df[new_column_order]
 
 # Save the updated CSV back to the file
 df.to_csv(csv_path, index=False)
 
-print(f"Moved column '{column_to_move}' to the last position.")
+print(f"Moved last column '{last_column}' to the 3rd position.")
