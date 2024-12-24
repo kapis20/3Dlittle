@@ -1,7 +1,9 @@
-# import pandas as pd
-
+import pandas as pd
+###################################
+## Add name of the set 
+###################################
 # # Define paths to your CSV files
-# train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
+#train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 # valid_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/valid/_annotations.csv"
 # test_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
 
@@ -26,10 +28,12 @@
 # add_set_column(test_csv_path, 'TEST')
 
 
-import pandas as pd
-
-# # Define your CSV file path and image directory
-csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
+# import pandas as pd
+###################################
+## Add path 
+###################################
+# # # Define your CSV file path and image directory
+# csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 # image_dir = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/"  # Image directory
 
 # # Load the CSV file
@@ -43,6 +47,37 @@ csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 
 # print("Updated CSV with full paths in the second column.")
 
+
+
+###################################
+# shuffle label 
+###################################
+import pandas as pd
+
+# Path to your CSV file
+csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
+
+# Load the CSV
+df = pd.read_csv(csv_path)
+
+# Get column names
+columns = list(df.columns)
+
+# Move column 5 (index 4) to column 3 (index 2)
+columns.insert(2, columns.pop(4))  # Pop column 5 and insert it at index 2
+
+# Reorder the DataFrame
+df = df[columns]
+
+# Save the updated CSV back to the file
+df.to_csv(csv_path, index=False)
+
+print("Column 5 (index 4) moved to column 3 (index 2).")
+
+
+###################################
+# help class
+###################################
 # from tflite_model_maker import object_detector
 
 # help(object_detector.DataLoader.from_csv)
@@ -59,21 +94,21 @@ csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 # print("Removed columns 2 and 3 successfully.")
 
 
-df = pd.read_csv(csv_path)
+# df = pd.read_csv(csv_path)
 
-# Load the CSV
-df = pd.read_csv(csv_path)
+# # Load the CSV
+# df = pd.read_csv(csv_path)
 
-# Get the name of the last column
-last_column = df.columns[-1]
+# # Get the name of the last column
+# last_column = df.columns[-1]
 
-# Create a new column order: Insert the last column at index 2 (3rd position)
-new_column_order = list(df.columns[:2]) + [last_column] + list(df.columns[2:-1])
+# # Create a new column order: Insert the last column at index 2 (3rd position)
+# new_column_order = list(df.columns[:2]) + [last_column] + list(df.columns[2:-1])
 
-# Reorder the DataFrame
-df = df[new_column_order]
+# # Reorder the DataFrame
+# df = df[new_column_order]
 
-# Save the updated CSV back to the file
-df.to_csv(csv_path, index=False)
+# # Save the updated CSV back to the file
+# df.to_csv(csv_path, index=False)
 
-print(f"Moved last column '{last_column}' to the 3rd position.")
+# print(f"Moved last column '{last_column}' to the 3rd position.")
