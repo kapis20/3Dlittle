@@ -51,13 +51,13 @@ test_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.c
 
 spec = model_spec.get('efficientdet_lite1')
 
-train_data = object_detector.DataLoader.from_csv(train_csv_path)
+#train_data = object_detector.DataLoader.from_csv(train_csv_path)
 #validation_data = object_detector.DataLoader.from_csv(valid_csv_path)
-#test_data = object_detector.DataLoader.from_csv(test_csv_path)
+test_data = object_detector.DataLoader.from_csv(test_csv_path)
 
 #print(type(train_data))
-print(type(train_data))  # Check the type of train_data
-print(train_data)  # Check the content of train_data
+print(type(test_data))  # Check the type of train_data
+print(test_data)  # Check the content of train_data
 
 
 # model = object_detector.create(

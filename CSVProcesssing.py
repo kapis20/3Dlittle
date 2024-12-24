@@ -23,8 +23,8 @@ import pandas as pd
 #         print(f"Error processing {csv_path}: {e}")
 
 # # Add the column to each CSV
-# add_set_column(train_csv_path, 'TRAINING')
-# add_set_column(valid_csv_path, 'VALIDATION')
+# #add_set_column(train_csv_path, 'TRAINING')
+# #add_set_column(valid_csv_path, 'VALIDATION')
 # add_set_column(test_csv_path, 'TEST')
 
 
@@ -33,8 +33,8 @@ import pandas as pd
 # # Add path 
 # ##################################
 # # # Define your CSV file path and image directory
-# csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
-# image_dir = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/"  # Image directory
+# csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
+# image_dir = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/"  # Image directory
 
 # # Load the CSV file
 # df = pd.read_csv(csv_path)
@@ -55,7 +55,7 @@ import pandas as pd
 # import pandas as pd
 
 # Path to your CSV file
-csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
+csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
 
 # Load the CSV
 df = pd.read_csv(csv_path)
