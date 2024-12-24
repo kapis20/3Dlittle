@@ -61,7 +61,7 @@ train_data, validation_data, test_data = object_detector.DataLoader.from_csv(tra
 
 model = object_detector.create(
     train_data, model_spec=spec, 
-    epochs=50, batch_size=10, 
+    epochs=50, batch_size=1, 
     train_whole_model=True, 
     validation_data=validation_data)
 
