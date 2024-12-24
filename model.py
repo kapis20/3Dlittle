@@ -17,36 +17,9 @@ logging.set_verbosity(logging.ERROR)
 ########################
 # paths 
 ########################
-train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotationscopy.csv"
-valid_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/valid/_annotations.csv"
-test_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
-
-
-
-
-# data = pd.read_csv(train_csv_path)
-# print("Columns in the CSV file:")
-# print(data.columns)
-
-# for path in [train_csv_path, valid_csv_path, test_csv_path]:
-#     if os.path.exists(path):
-#         print(f"File exists: {path}")
-#     else:
-#         print(f"File does NOT exist: {path}")
-
-# for path in [train_csv_path, valid_csv_path, test_csv_path]:
-#     if os.access(path, os.R_OK):
-#         print(f"File is readable: {path}")
-#     else:
-#         print(f"File is NOT readable: {path}")
-
-# for path in [train_csv_path, valid_csv_path, test_csv_path]:
-#     data = pd.read_csv(path)
-#     all_files_exist = all(os.path.exists(file_path) for file_path in data['file_path_column'])
-#     if all_files_exist:
-#         print(f"All file paths in {path} are valid.")
-#     else:
-#         print(f"Some file paths in {path} are invalid.")
+train_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
+# valid_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/valid/_annotations.csv"
+# test_csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/test/_annotations.csv"
 
 
 spec = model_spec.get('efficientdet_lite1')
@@ -61,7 +34,7 @@ train_data, validation_data, test_data = object_detector.DataLoader.from_csv(tra
 
 model = object_detector.create(
     train_data, model_spec=spec, 
-    epochs=50, batch_size=1, 
+    epochs=1, batch_size=1, 
     train_whole_model=True, 
     validation_data=validation_data)
 
