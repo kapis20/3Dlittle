@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>spaghetti_91_jpg.rf.2b147f68c7718049a4c11374c5f190be.jpg</filename>
+	<path>spaghetti_91_jpg.rf.2b147f68c7718049a4c11374c5f190be.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>spaghetti</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>150</xmin>
+			<xmax>626</xmax>
+			<ymin>157</ymin>
+			<ymax>434</ymax>
+		</bndbox>
+	</object>
+</annotation>
