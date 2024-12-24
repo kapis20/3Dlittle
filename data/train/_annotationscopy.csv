@@ -1,2 +1,6 @@
 TRAINING,/home/kapis20/Projects/3D_new/3Dlittle/data/train/336090828_939113523935894_857057614776083733_n_cropped_jpg.rf.cc38d7e0cd66d2402221f09af6209168.jpg,spaghetti,640,640,112,442,231,564
 TRAINING,/home/kapis20/Projects/3D_new/3Dlittle/data/train/336090828_939113523935894_857057614776083733_n_cropped_jpg.rf.cc38d7e0cd66d2402221f09af6209168.jpg,spaghetti,640,640,90,355,211,434
+TEST,/home/kapis20/Projects/3D_new/3Dlittle/data/test/spaghetti_91_jpg.rf.2b147f68c7718049a4c11374c5f190be.jpg,spaghetti,640,640.1,149,156,625,433
+TEST,/home/kapis20/Projects/3D_new/3Dlittle/data/test/imag-111-_jpg.rf.3ea9b56e84d61afcf8c4048a2076a7af.jpg,spaghetti,640,640,295,133,398,479
+VALIDATION,/home/kapis20/Projects/3D_new/3Dlittle/data/valid/imag-90-_jpg.rf.02a40190c15dfb01f67b15a26b1f9442.jpg,spaghetti,640,640.1,325,289,602,635
+VALIDATION,/home/kapis20/Projects/3D_new/3Dlittle/data/valid/imag-90-_jpg.rf.02a40190c15dfb01f67b15a26b1f9442.jpg,spaghetti,640,640,340,55,526,291
