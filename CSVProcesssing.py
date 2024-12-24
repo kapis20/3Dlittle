@@ -48,12 +48,24 @@ csv_path = "/home/kapis20/Projects/3D_new/3Dlittle/data/train/_annotations.csv"
 # help(object_detector.DataLoader.from_csv)
 
 # Load the CSV
+#df = pd.read_csv(csv_path)
+
+# # Drop columns by index (2 and 3)
+# df.drop(df.columns[[2, 3]], axis=1, inplace=True)
+
+# # Save the updated CSV back to the file
+# df.to_csv(csv_path, index=False)
+
+# print("Removed columns 2 and 3 successfully.")
+
+
 df = pd.read_csv(csv_path)
 
-# Drop columns by index (2 and 3)
-df.drop(df.columns[[2, 3]], axis=1, inplace=True)
+# Move column 2 to the last position
+column_to_move = df.columns[2]  # Get the column name at index 2
+df = df[[col for col in df.columns if col != column_to_move] + [column_to_move]]
 
 # Save the updated CSV back to the file
 df.to_csv(csv_path, index=False)
 
-print("Removed columns 2 and 3 successfully.")
+print(f"Moved column '{column_to_move}' to the last position.")
